@@ -2,3 +2,8 @@ name: KasperskySafeKids
 version: '1.0'
 main: me.zesimme.kasperskySafeKids.KasperskySafeKids
 api-version: '1.21'
+description: Lock and unlock blocks and entities by clicking on them when in lock mode. (Use /lockmode to toggle)
+commands:
+  lock:
+    description: Toggles the lock mode for the player. Add everyone you trust.
+    usage: /<command> [...owners]
