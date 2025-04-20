@@ -59,7 +59,6 @@ public class UseListener implements Listener {
         }
 
         String[] owners = data.get(ownersKey, PersistentDataType.STRING).split(", ");
-        System.out.println("Hopper owners: " + String.join(", ", owners));
         for (String owner : owners) {
             if (isLockedBlock(owner, source.getBlock())) {
                 cancel(e, null);
@@ -120,10 +119,7 @@ public class UseListener implements Listener {
 
         List<String> owners = List.of(data.get(ownersKey, PersistentDataType.STRING).split(", "));
 
-        System.out.println("Owners: " + String.join(", ", owners));
-        System.out.println("Player: " + player);
-
-        return !owners.contains(player.toLowerCase());
+       return !owners.contains(player.toLowerCase());
     }
 
     public void cancel(Cancellable e, Player p) {
