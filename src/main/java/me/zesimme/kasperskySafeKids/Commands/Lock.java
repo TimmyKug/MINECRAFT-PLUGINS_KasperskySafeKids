@@ -16,6 +16,11 @@ public class Lock implements CommandExecutor {
             return false;
         }
 
+        if (!p.hasPermission("kasperskysafekids.lock")) {
+            p.sendMessage(ChatColor.RED + "You do not have permission to use this command.");
+            return true;
+        }
+
         if (!Utils.isLocationInRegion(p.getLocation())) {
             p.sendMessage(ChatColor.RED + "You cannot use the lock command here.");
             return true;

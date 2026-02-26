@@ -7,3 +7,9 @@ commands:
   lock:
     description: Toggles the lock mode for the player. Add everyone you trust.
     usage: /<command> [...owners]
+    permission: kasperskysafekids.lock
+
+permissions:
+  kasperskysafekids.lock:
+    description: Allows a player to lock and protect their own containers/entities
+    default: op
