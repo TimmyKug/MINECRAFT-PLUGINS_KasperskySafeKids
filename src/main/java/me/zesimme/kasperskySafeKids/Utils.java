@@ -19,6 +19,9 @@ public class Utils {
         if (loc == null || loc.getWorld() == null || plugin == null)
             return true;
 
+        if (!plugin.getConfig().getBoolean("use-regions", false))
+            return true;
+
         ConfigurationSection regions = plugin.getConfig().getConfigurationSection("regions");
         if (regions == null || regions.getKeys(false).isEmpty()) {
             return true;

@@ -1,6 +1,9 @@
 # Region restrictions
+# Master switch to enable or disable region-based locking:
+use-regions: false
+
 # If the regions section is empty or missing, locking works everywhere in all worlds.
-# If regions are defined, locking/unlocking and protection only apply within the bounds of these regions.
+# If regions are defined (and use-regions is true), locking/unlocking and protection only apply within the bounds of these regions.
 regions:
   spawn:
     world: "world"
