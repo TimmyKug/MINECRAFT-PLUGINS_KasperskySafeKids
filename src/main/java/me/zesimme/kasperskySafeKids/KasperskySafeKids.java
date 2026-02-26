@@ -9,6 +9,9 @@ public final class KasperskySafeKids extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+        Utils.init(this);
+
         getCommand("lock").setExecutor(new Lock());
         getServer().getPluginManager().registerEvents(new UseListener(), this);
         getServer().getPluginManager().registerEvents(new LockListener(), this);
@@ -16,6 +19,5 @@ public final class KasperskySafeKids extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
 }

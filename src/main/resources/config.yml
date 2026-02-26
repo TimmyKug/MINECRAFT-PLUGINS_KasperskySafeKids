@@ -1,0 +1,12 @@
+# Region restrictions
+# If the regions section is empty or missing, locking works everywhere in all worlds.
+# If regions are defined, locking/unlocking and protection only apply within the bounds of these regions.
+regions:
+  spawn:
+    world: "world"
+    min-x: -100
+    max-x: 100
+    min-y: -64
+    max-y: 320
+    min-z: -100
+    max-z: 100
